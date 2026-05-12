@@ -1,0 +1,196 @@
+.quiz-container {
+  min-height: 100vh;
+  width:90%;
+  background-color: #f3f4f6;
+  padding: 20px;
+
+}
+
+.quiz-card {
+  /* background-color: white;
+  width: 90%;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2); */
+    width: 95%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.quiz-title {
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  text-decoration: none;
+}
+
+.back-icon {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left:40px;
+}
+
+.back-icon:hover {
+  transform: scale(1.1);
+}
+
+.question-count {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  margin-bottom: 20px;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.option-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
+}
+
+.tick {
+  color: green;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.wrong-tick {
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.check-btn,
+.next-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.check-btn {
+  background-color: black;
+}
+
+.next-btn {
+  background-color: blue;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.correct-text {
+  color: green;
+  font-weight: bold;
+}
+
+.wrong-text {
+  color: red;
+  font-weight: bold;
+}
+
+.completed {
+  margin-top: 20px;
+  text-align: center;
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dark .quiz-container {
+  background-color: #0f172a;
+}
+
+.dark .quiz-card {
+  background-color: #1e293b;
+  color: white;
+  box-shadow: 0px 4px 12px rgba(255,255,255,0.1);
+}
+
+.dark .quiz-title {
+  color: white;
+}
+
+.dark .question-text {
+  color: #f1f5f9;
+}
+
+.dark .option {
+  color: #e2e8f0;
+}
+
+.dark .correct {
+  color: #4ade80;
+}
+
+.dark .wrong {
+  color: #f87171;
+}
+
+.dark .tick {
+  color: #4ade80;
+}
+
+.dark .wrong-tick {
+  color: #f87171;
+}
+
+.dark .check-btn {
+  background-color: #2563eb;
+}
+
+.dark .check-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.dark .score-box {
+ color:white;
+}
+
+
+.dark .back-icon {
+  filter: invert(1);
+}

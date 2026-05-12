@@ -1,0 +1,33 @@
+.home-page {
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.home-page h1 {
+  font-size: 50px;
+}
+
+.home-page p {
+  font-size: 22px;
+}
+
+/* LIGHT MODE */
+
+.light .home-page {
+  background-color: white;
+  color: black;
+}
+
+/* DARK MODE */
+
+.dark .home-page {
+  background-color: #121212;
+  color: white;
+}
+
