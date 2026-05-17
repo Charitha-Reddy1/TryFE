@@ -67,6 +67,20 @@
   font-size: 18px;
 }
 
+.aau{
+  margin-bottom:15px;
+}
+
+.nav-btn{
+  text-decoration:none;
+  background-color: #4caf50;
+  color: white;
+}
+
+.nav-btn:hover{
+  background-color: #3197b6;
+}
+
 .dark .toggle-password {
   color: #93c5fd;
 }
@@ -92,6 +106,21 @@
   border-radius: 6px;
 
   background-color: #4caf50;
+  color: white;
+  
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  width: 100%;
+  padding: 12px;
+  
+  margin-top: 15px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #3197b6;
   color: white;
 
   cursor: pointer;
