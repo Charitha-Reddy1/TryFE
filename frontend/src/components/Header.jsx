@@ -8,9 +8,10 @@ import logo from "./quiz.webp";
 
 function Header() {
   const { theme, setTheme } = useContext(AppContext);
-
-
   const { user } = useContext(AppContext);
+
+  const [showProfile,setShowProfile]=useState(false);
+  
   return (
     <div className="App-Header">
       <h1>Verbal Reasoning Quiz</h1>
