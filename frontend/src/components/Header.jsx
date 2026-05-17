@@ -34,10 +34,15 @@ function Header() {
     ) : (
       <>
       
-        <li>
-          <span>Welcome, {user.name}</span>
-        </li>
+      <div className="profile-section">
 
+      <i className="fa-solid fa-user profile-icon"></i>
+
+      <span>
+        Welcome, {user?.name}
+      </span>
+
+    </div>
         <li>
           <Link to="/">
             <button className="nav-btn">Home</button>

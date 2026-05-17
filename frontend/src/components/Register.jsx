@@ -12,6 +12,11 @@ function Register(){
     const navigate=useNavigate()
     const handleSubmit=async (e)=>{
         e.preventDefault();
+     
+    if(user.name.length < 3){
+   setError("Name must be atleast 3 characters");
+   return;
+}
 
     if(!user.email || !user.password){
         setError("All fields are required");
@@ -57,8 +62,21 @@ function Register(){
     <div className='auth-container'>
     <h1>Registration Page</h1>
     {error && <p className='error-text'>{error}</p>}
+
+      <p><input
+      type="text"
+      required
+      placeholder="Name"
+      onChange={(e) =>
+        setUser({
+          ...user,
+          name: e.target.value,
+        })
+      }
+    /></p> 
+
     <p>
-    <input type="email" onChange={(e)=>
+    <input type="email" required onChange={(e)=>
       setUser({...user,email:e.target.value
 
       })} placeholder="Email"></input></p>
@@ -66,6 +84,7 @@ function Register(){
     <p className="password-box">
 
   <input
+  required
     type={
       showPass
         ? "text"
@@ -102,7 +121,7 @@ function Register(){
 
     <p><button type="submit">Submit</button></p>
     <p>Already a User?👇🏻</p>
-    <p><Link to='/login'><button className="nav-btn">Login</button></Link></p>
+    <p><Link to='/login' className="nav-btn">Login</Link></p>
     </div>
     </div>
     </form>

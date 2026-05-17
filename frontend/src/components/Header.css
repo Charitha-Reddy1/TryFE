@@ -56,3 +56,16 @@ ul {
   background-color: #332f5e;
   color: white;
 }
+
+.profile-section{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  font-weight:bold;
+}
+
+.profile-icon{
+  font-size:22px;
+  cursor:pointer;
+}
