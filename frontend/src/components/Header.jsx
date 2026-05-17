@@ -33,10 +33,22 @@ function Header() {
       </>
     ) : (
       <>
+      
         <li>
           <span>Welcome, {user.name}</span>
         </li>
 
+        <li>
+          <Link to="/">
+            <button className="nav-btn">Home</button>
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/leaderboard">
+            <button className="nav-btn">Leaderboard🏆</button>
+          </Link>
+        </li>
         <li>
           <Link to="/logout">
             <button className="nav-btn">Logout</button>

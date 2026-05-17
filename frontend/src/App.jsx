@@ -11,6 +11,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import QuizQues from './components/QuizQues'
 import QuizTopics from './components/QuizTopics'
+import Leaderboard from './components/Leaderboard'
 
 
 export const AppContext =createContext()
@@ -33,6 +34,7 @@ function App() {
       <Route path="logout" element={<Logout/>} />
       <Route path="quiz/:topic" element={<QuizQues/>} />
       <Route path="topics" element={<QuizTopics/>}/>
+      <Route path='leaderboard' element={<Leaderboard/>}/>
       
       </Routes>
 

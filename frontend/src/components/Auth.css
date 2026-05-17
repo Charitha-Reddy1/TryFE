@@ -29,9 +29,57 @@
   margin-top: 20px;
   margin-right:40px;
   margin-left:-10px;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 6px;
   
+}
+
+
+.password-box {
+  position: relative;
+  /* width: 100%; */
+}
+
+.password-box input {
+  width: 100%;
+  padding: 10px;
+  /* box-sizing: border-box; */
+}
+
+
+.toggle-password {
+  position: absolute;
+  right: 0px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #2563eb;
+  font-size: 18px;
+}
+
+.toggle-passl {
+  position: absolute;
+  right: 0px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #2563eb;
+  font-size: 18px;
+}
+
+.dark .toggle-password {
+  color: #93c5fd;
+}
+
+.error-text{
+  color: #ff1f1f;
+  font-size:20px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+
+.dark .error-text {
+  color: #ff6b6b;
 }
 
 .auth-container button {
