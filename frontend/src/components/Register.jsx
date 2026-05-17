@@ -13,15 +13,14 @@ function Register(){
     const handleSubmit=async (e)=>{
         e.preventDefault();
 
-    if(!user.name || !user.password){
+    if(!user.email || !user.password){
         setError("All fields are required");
         return;
     }
-
-    if(user.name.length<3){
-        setError("Name must be atleast 3 characters");
-        return;
-    }
+    if(!user.email.includes("@")){
+    setError("Enter valid email");
+    return;
+}
 
     if(user.password.length<6){
         setError("Password must be atleast 6 characters");
