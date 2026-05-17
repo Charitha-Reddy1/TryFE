@@ -1,7 +1,7 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { AppContext } from "../App";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import logo from "./quiz.webp";
 //import {AppContext} from '../App'
 
@@ -11,7 +11,7 @@ function Header() {
   const { user } = useContext(AppContext);
 
   const [showProfile,setShowProfile]=useState(false);
-  
+
   return (
     <div className="App-Header">
       <h1>Verbal Reasoning Quiz</h1>
