@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../App";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 import "./Profile.css";
 
 function Profile() {
@@ -16,6 +17,8 @@ function Profile() {
 
   const API_URL =
     import.meta.env.VITE_API_URL;
+
+  const handleUpdate=useNavigate();
 
   const handleUpdate = async () => {
 
@@ -40,6 +43,7 @@ function Profile() {
       });
 
       setEditMode(false);
+      navigate("/");
 
     } catch (error) {
 
