@@ -57,13 +57,16 @@ function Profile() {
 
     <div className="profile-page">
 
-      <div className="profile-card">
+  <div className="profile-container">
 
-        <i className="fa-solid fa-user profile-big-icon"></i>
+    <div className="profile-top">
 
-        <div className="name-section">
+      <i className="fa-solid fa-user profile-big-icon"></i>
 
-          <h2>{user?.name}</h2>
+      <div className="profile-details">
+
+        <h1>
+          {user?.name}
 
           <i
             className="fa-solid fa-pen-to-square edit-icon"
@@ -72,7 +75,7 @@ function Profile() {
             }
           ></i>
 
-        </div>
+        </h1>
 
         <p>{user?.email}</p>
 
@@ -86,12 +89,9 @@ function Profile() {
               onChange={(e) =>
                 setNewName(e.target.value)
               }
-              placeholder="Enter new username"
             />
 
-            <button
-              onClick={handleUpdate}
-            >
+            <button onClick={handleUpdate}>
               Update Name
             </button>
 
@@ -102,6 +102,29 @@ function Profile() {
       </div>
 
     </div>
+
+    <div className="profile-stats">
+
+      <div className="stat-box">
+        <h2>12</h2>
+        <p>Quizzes Completed</p>
+      </div>
+
+      <div className="stat-box">
+        <h2>89%</h2>
+        <p>Best Score</p>
+      </div>
+
+      <div className="stat-box">
+        <h2>5</h2>
+        <p>Leaderboard Rank</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
  
   );
 }
