@@ -79,18 +79,33 @@
   color: #2563eb;
 }
 
-.profile-details h1{
+.dark .profile-details h1{
 
   font-size: 48px;
 
   margin-bottom: 10px;
 }
 
-.profile-details p{
+
+.light .profile-details h1{
+
+  font-size: 48px;
+  color:#29292a;
+
+  margin-bottom: 10px;
+}
+.dark .profile-details p{
 
   font-size: 22px;
 
   color: #cbd5e1;
+}
+
+.light .profile-details p{
+
+  font-size: 22px;
+
+  color: #29292a;
 }
 
 .dark .edit-icon{
@@ -109,6 +124,17 @@
   margin-left: 15px;
 
   color: #2563eb;
+
+  cursor: pointer;
+
+  font-size: 24px;
+}
+
+.edit-icon:hover{
+
+  margin-left: 15px;
+
+  color: #ce4924;
 
   cursor: pointer;
 
@@ -145,12 +171,16 @@
   padding: 14px;
   border: none;
   border-radius: 10px;
-  background-color: #2563eb;
+  background-color: #60a5fa;
   color: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.dark .edit-section button:hover{
+    background-color: #2563eb;
 }
 
 .light .edit-section button{
@@ -167,9 +197,13 @@
   transition: 0.3s;
 }
 
+.light .edit-section button:hover{
+    background-color: #60a5fa;
+}
+
 .edit-section button:hover{
 
-  background-color: #1d4ed8;
+  background-color: #5b7cd9;
 }
 
 .profile-stats{
@@ -183,7 +217,7 @@
   flex-wrap: wrap;
 }
 
-.stat-box{
+.dark .stat-box{
 
   flex: 1;
 
@@ -198,7 +232,23 @@
   backdrop-filter: blur(10px);
 }
 
-.stat-box h2{
+.light .stat-box{
+
+  flex: 1;
+
+  min-width: 220px;
+
+  background-color: rgba(0, 0, 0, 0.08);
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.dark .stat-box h2{
 
   font-size: 40px;
 
@@ -207,9 +257,27 @@
   color: #60a5fa;
 }
 
-.stat-box p{
+.light .stat-box h2{
+
+  font-size: 40px;
+
+  margin-bottom: 10px;
+
+  color: #1661bc;
+}
+
+.dark .stat-box p{
 
   font-size: 18px;
 
   color: #e2e8f0;
 }
+
+.light .stat-box p{
+
+  font-size: 18px;
+
+  color: #47484a;
+}
+
+
