@@ -29,6 +29,7 @@ function App() {
   <BrowserRouter>
       <Header/>
     <Routes>
+      
       <Route path="/" element={<Home/>} />
       <Route path="login" element={<Login/>} />
       <Route path="register" element={<Register/>} />
@@ -36,6 +37,7 @@ function App() {
       <Route path="quiz/:topic" element={<QuizQues/>} />
       <Route path="topics" element={<QuizTopics/>}/>
       <Route path='leaderboard' element={<Leaderboard/>}/>
+      <Route path='profile' element={<Profile/>}/>
       
       </Routes>
 
