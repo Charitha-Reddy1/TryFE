@@ -37,42 +37,11 @@ function Header() {
       
       <li className="profile-section">
 
-        <div className="profile-section">
+        <Link to="/profile">
 
-  <i
-    className="fa-solid fa-user profile-icon"
-    onClick={() =>
-      setShowProfile(!showProfile)
-    }
-  ></i>
+          <i className="fa-solid fa-user profile-icon"></i>
 
-  {showProfile && (
-
-    <div className="profile-card">
-
-      <h3>{user.name}</h3> <i
-    className="fa-solid fa-pen-to-square edit-icon"></i>
-
-      <p>{user.email}</p>
-
-      <input
-        type="text"
-        placeholder="New username"
-      />
-
-      <button>
-        Save
-      </button>
-
-      <button>
-        Logout
-      </button>
-
-    </div>
-
-  )}
-
-</div>
+        </Link>
 
         <span>
           Welcome, {user?.name}

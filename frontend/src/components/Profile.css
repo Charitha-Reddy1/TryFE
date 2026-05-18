@@ -1,0 +1,50 @@
+.profile-page{
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.profile-card{
+
+  width: 350px;
+
+  padding: 30px;
+
+  border-radius: 16px;
+
+  background: white;
+
+  text-align: center;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.profile-big-icon{
+
+  font-size: 80px;
+
+  margin-bottom: 20px;
+
+  color: #2563eb;
+}
+
+.edit-section input{
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 20px;
+}
+
+.edit-section button{
+
+  margin-top: 15px;
+
+  width: 100%;
+}

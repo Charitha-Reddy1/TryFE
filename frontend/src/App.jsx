@@ -12,6 +12,7 @@ import Home from './components/Home'
 import QuizQues from './components/QuizQues'
 import QuizTopics from './components/QuizTopics'
 import Leaderboard from './components/Leaderboard'
+import Profile from './components/Profile'
 
 
 export const AppContext =createContext()
