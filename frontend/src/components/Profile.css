@@ -2,49 +2,152 @@
 
   min-height: 100vh;
 
+  width: 100%;
+
   display: flex;
 
   justify-content: center;
 
   align-items: center;
+
+  padding-top: 120px;
+
+  background: linear-gradient(
+    to bottom right,
+    #0f0f0f,
+    #1e1e1e
+  );
 }
 
 .profile-card{
 
-  width: 350px;
+  width: 380px;
 
-  padding: 30px;
+  background-color: white;
 
-  border-radius: 16px;
+  border-radius: 20px;
 
-  background: white;
+  padding: 40px 30px;
 
   text-align: center;
 
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+  transition: 0.3s;
+}
+
+.profile-card:hover{
+
+  transform: translateY(-5px);
 }
 
 .profile-big-icon{
 
-  font-size: 80px;
-
-  margin-bottom: 20px;
+  font-size: 90px;
 
   color: #2563eb;
+
+  margin-bottom: 20px;
+}
+
+.name-section{
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.name-section h2{
+
+  font-size: 32px;
+
+  color: #222;
+}
+
+.edit-icon{
+
+  color: #2563eb;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+.edit-icon:hover{
+
+  color: #1d4ed8;
+
+  transform: scale(1.1);
+}
+
+.profile-card p{
+
+  color: #555;
+
+  font-size: 18px;
+
+  margin-bottom: 20px;
+}
+
+.edit-section{
+
+  margin-top: 20px;
 }
 
 .edit-section input{
 
   width: 100%;
 
-  padding: 10px;
+  padding: 12px;
 
-  margin-top: 20px;
+  border: 1px solid #ccc;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+}
+
+.edit-section input:focus{
+
+  border-color: #2563eb;
 }
 
 .edit-section button{
 
-  margin-top: 15px;
-
   width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.edit-section button:hover{
+
+  background-color: #1d4ed8;
 }
