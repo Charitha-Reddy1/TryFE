@@ -18,7 +18,7 @@ function Profile() {
   const API_URL =
     import.meta.env.VITE_API_URL;
 
-  const handleUpdate=useNavigate();
+  const navigate=useNavigate();
 
   const handleUpdate = async () => {
 
