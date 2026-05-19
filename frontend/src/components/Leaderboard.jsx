@@ -12,7 +12,7 @@ function Leaderboard() {
 
     axios
       .get(
-        `${API_URL}/leaderboard/all`
+        `${API_URL}/score/leaderboard/all`
       )
       .then((res) => {
         setLeaders(res.data);
