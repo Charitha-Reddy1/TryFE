@@ -83,10 +83,11 @@ function QuizTopics() {
 
     if (user?.name) {
 
-      axios
-        .get(
-          `http://localhost:5000/score/${user.name}`
-        )
+      const API_URL = import.meta.env.VITE_API_URL;
+
+      axios.get(
+        `${API_URL}/score/${user.name}`
+      )
 
         .then((res) => {
           setScores(res.data);
