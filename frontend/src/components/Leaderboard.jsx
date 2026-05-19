@@ -8,9 +8,11 @@ function Leaderboard() {
 
   useEffect(() => {
 
+    const API_URL= import.meta.env.VITE_API_URL;
+
     axios
       .get(
-        "http://localhost:5000/score/leaderboard/all"
+        `${API_URL}/leaderboard/all`
       )
       .then((res) => {
         setLeaders(res.data);
