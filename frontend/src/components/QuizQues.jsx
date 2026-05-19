@@ -745,8 +745,10 @@ const handleCheckAnswers = async () => {
 
   try {
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     await axios.post(
-      "http://localhost:5000/score/save",
+      `${API_URL}/score/save`,
       {
         userName: user.name,
         topic,
