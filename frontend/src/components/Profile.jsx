@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState ,useEffect} from "react";
 import { AppContext } from "../App";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
@@ -8,6 +8,40 @@ function Profile() {
 
   const { user, setUser } =
     useContext(AppContext);
+
+  const [stats, setStats] = useState({
+
+      quizzesCompleted: 0,
+      bestScore: 0,
+      rank: "-",
+    });
+
+  useEffect(() => {
+
+
+  const API_URL =
+    import.meta.env.VITE_API_URL;
+
+  axios
+    .get(
+      `${API_URL}/score/stats/${user.name}`
+    )
+
+    .then((res) => {
+
+      setStats(res.data);
+
+    })
+
+    .catch((err) => {
+
+      console.log(err);
+
+    });
+
+}, []);
+
+
 
   const [editMode, setEditMode] =
     useState(false);
@@ -106,17 +140,17 @@ function Profile() {
     <div className="profile-stats">
 
       <div className="stat-box">
-        <h2>12</h2>
+        <h2>{stats.quizzesCompleted}</h2>
         <p>Quizzes Completed</p>
       </div>
 
       <div className="stat-box">
-        <h2>89%</h2>
+        <h2>{stats.bestScore}%</h2>
         <p>Best Score</p>
       </div>
 
       <div className="stat-box">
-        <h2>5</h2>
+        <h2>{stats.rank}</h2>
         <p>Leaderboard Rank</p>
       </div>
 
