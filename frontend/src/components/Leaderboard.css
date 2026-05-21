@@ -6,6 +6,14 @@
   font-size: 15px;
 }
 
+.dropdown-container {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
 .leaderboard-page {
   min-height: 100vh;
   padding: 50px 30px;

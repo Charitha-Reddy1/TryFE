@@ -31,6 +31,8 @@ function Leaderboard() {
     <div className="leaderboard-page">
 
       <h1>Leaderboard</h1>
+
+      <div className='dropdown-container'>
       <select
   className="topic-dropdown"
   value={selectedTopic}
@@ -56,7 +58,7 @@ function Leaderboard() {
   </option>
 
 </select>
-
+</div>
       <table>
 
         <thead>
