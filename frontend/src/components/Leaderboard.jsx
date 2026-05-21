@@ -4,27 +4,58 @@ import "./Leaderboard.css"
 
 function Leaderboard() {
 
-  const [leaders, setLeaders] = useState([]);
-
+  const[selectedTopic,setSelectedTopic]=useState("all");
   useEffect(() => {
 
-    const API_URL= import.meta.env.VITE_API_URL;
+  const API_URL =
+    import.meta.env.VITE_API_URL;
 
-    axios
-      .get(
-        `${API_URL}/score/leaderboard/all`
-      )
-      .then((res) => {
-        setLeaders(res.data);
-      });
+  const url =
+    selectedTopic === "all"
+      ? `${API_URL}/score/leaderboard/all`
+      : `${API_URL}/score/leaderboard/${selectedTopic}`;
 
-  }, []);
+  axios.get(url)
+    .then((res) => {
+      setLeaders(res.data);
+    });
+
+}, [selectedTopic]);
+
+  const [leaders, setLeaders] = useState([]);
+
+
 
   return (
 
     <div className="leaderboard-page">
 
       <h1>Leaderboard</h1>
+      <select
+  className="topic-dropdown"
+  value={selectedTopic}
+  onChange={(e) =>
+    setSelectedTopic(e.target.value)
+  }
+>
+
+  <option value="all">
+    Overall
+  </option>
+
+  <option value="synonyms">
+    Synonyms
+  </option>
+
+  <option value="antonyms">
+    Antonyms
+  </option>
+
+  <option value="idioms">
+    Idioms
+  </option>
+
+</select>
 
       <table>
 
