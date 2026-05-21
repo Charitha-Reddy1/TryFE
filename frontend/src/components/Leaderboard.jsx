@@ -54,7 +54,35 @@ function Leaderboard() {
   </option>
 
   <option value="idioms">
-    Idioms
+    Idioms and Phrases
+  </option>
+
+  <option value="speech">
+    Direct-indirect Speech
+  </option>
+
+  <option value="voice">
+    Active-Passive Voice
+  </option>
+
+  <option value="oneword">
+    One Word Substitutes
+  </option>
+
+  <option value="incorrectpart">
+    Sentence Correction
+  </option>
+
+  <option value="fillblanks">
+    Fill the blank
+  </option>
+
+  <option value="spelling">
+    Spelling Correction
+  </option>
+
+  <option value="order">
+    Sentence order
   </option>
 
 </select>
