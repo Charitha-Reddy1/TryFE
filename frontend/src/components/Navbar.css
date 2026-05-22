@@ -1,66 +1,112 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 30px;
-  background-color: #312e81;
-  color: white;
-  position: relative;
-}
-
-.logo {
-  font-size: 34px;
-  font-weight: bold;
-}
-
-.menu-section {
-  position: relative;
-}
+/* Hamburger */
 
 .hamburger {
-  font-size: 34px;
+
+  position: fixed;
+
+  top: 22px;
+  left: 20px;
+
+  z-index: 1200;
+
+  font-size: 30px;
+
+  color: white;
+
   cursor: pointer;
-  padding: 8px 14px;
+
+  padding: 4px 12px;
+
   border-radius: 8px;
+
   transition: 0.3s;
 }
 
 .hamburger:hover {
-  background-color: rgba(255,255,255,0.15);
+
+  background:
+    rgba(255,255,255,0.15);
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 220px;
-  background: #1e293b;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
+/* Sidebar */
+
+.sidebar {
+
+  position: fixed;
+
+  top: 0;
+  left: -270px;
+
+  width: 260px;
+  height: 100vh;
+
+  background: #0f172a;
+
+  padding: 90px 20px 20px;
+
+  transition: left 0.3s ease;
+
+  z-index: 1100;
+
+  box-shadow:
+    5px 0 20px rgba(0,0,0,0.4);
 }
 
-.dropdown-menu a,
-.dropdown-menu button {
+.sidebar.open {
 
-  padding: 16px 22px;
-  text-decoration: none;
+  left: 0;
+}
+
+.sidebar-title {
+
+  margin-bottom: 25px;
+
+  font-size: 22px;
+
+  color: #facc15;
+
+  letter-spacing: 1px;
+}
+
+.sidebar a {
+
+  display: block;
+
+  padding: 14px 15px;
+
+  margin-bottom: 10px;
+
   color: white;
-  font-size: 18px;
-  font-weight: 600;
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
+
+  text-decoration: none;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  border-radius: 10px;
+
+  transition: 0.25s;
 }
 
-.dropdown-menu a:hover,
-.dropdown-menu button:hover {
+.sidebar a:hover {
 
-  background-color: #2563eb;
-  padding-left: 28px;
+  background: #334155;
+
+  color: #facc15;
+
+  padding-left: 22px;
+}
+
+/* Overlay */
+
+.overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.45);
+
+  z-index: 1000;
 }
