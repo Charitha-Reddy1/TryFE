@@ -13,6 +13,7 @@ import QuizQues from './components/QuizQues'
 import QuizTopics from './components/QuizTopics'
 import Leaderboard from './components/Leaderboard'
 import Profile from './components/Profile'
+import ProtectedRoute from './components/ProtectedRoute'
 
 
 export const AppContext =createContext()
@@ -34,10 +35,27 @@ function App() {
       <Route path="login" element={<Login/>} />
       <Route path="register" element={<Register/>} />
       <Route path="logout" element={<Logout/>} />
-      <Route path="quiz/:topic" element={<QuizQues/>} />
-      <Route path="topics" element={<QuizTopics/>}/>
-      <Route path='leaderboard' element={<Leaderboard/>}/>
-      <Route path='profile' element={<Profile/>}/>
+      <Route path="quiz/:topic" element={
+        <ProtectedRoute user={user}>
+        <QuizQues/>
+        </ProtectedRoute>} />
+      <Route path="topics" element={
+        <ProtectedRoute user={user}>
+        <QuizTopics/>
+        </ProtectedRoute>}/>
+      <Route
+        path="leaderboard"
+        element={
+          <ProtectedRoute user={user}>
+            <Leaderboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route path='profile' element={
+        <ProtectedRoute user={user}>
+        <Profile/>
+        </ProtectedRoute>}
+        />
       
       </Routes>
 
