@@ -20,11 +20,13 @@ function Login(){
     const url = API_URL + "/auth/signin"
     const response = await axios.post(url, user)
 
+    
     if (response.data.error) {
       setError(response.data.error)
       return
     }
 
+    alert('Login is Successful!!');
     setUser(response.data)
     navigate("/")   // ✅ redirect to home
   } catch (error) {

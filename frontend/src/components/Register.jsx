@@ -121,7 +121,7 @@ function Register(){
 </p>
 
     <p><button type="submit">Submit</button></p>
-    <p class='aau'>Already a User?👇🏻</p>
+    <p className='aau'>Already a User?👇🏻</p>
     <p><Link to='/login' className="nav-btn">Login</Link></p>
     </div>
     </div>
