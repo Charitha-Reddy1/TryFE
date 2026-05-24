@@ -49,6 +49,7 @@ function Register(){
             return
         }
 
+        alert("Registered Successfully!");
         navigate("/login")
     }
     catch (error) {
