@@ -49,6 +49,7 @@ function Login(){
       {error && <p className='error-text'>{error}</p>}
       <p>
         <input
+          required
           type="email"
           onChange={(e) => setUser({ ...user, email: e.target.value })}
           placeholder="Email"
@@ -57,6 +58,7 @@ function Login(){
          <p className="password-box">
 
   <input
+  required
     type={
       showPass
         ? "text"
