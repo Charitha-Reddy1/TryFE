@@ -71,16 +71,6 @@
   margin-bottom:15px;
 }
 
-.nav-btn{
-  text-decoration:none;
-  background-color: #4caf50;
-  color: white;
-}
-
-.nav-btn:hover{
-  background-color: #3197b6;
-}
-
 .dark .toggle-password {
   color: #93c5fd;
 }
@@ -153,4 +143,16 @@
 
 .light .auth-container input::placeholder {
   color:grey;
+}
+
+.auth-container .nav-btn {
+
+text-decoration:none;
+}
+
+.auth-container .nav-btn:hover {
+
+  background-color: #3197b6;
+
+  color: white;
 }
