@@ -715,7 +715,9 @@ order: [
 
 };
 
-const questions=allQuestions[topic] || []; 
+const [questions, setQuestions] = useState(
+  allQuestions[topic] || []
+);
 
   const [answers, setAnswers] = useState({});
   const [checked, setChecked] = useState(false);
@@ -794,6 +796,37 @@ const handleCheckAnswers = async () => {
     }
 
   });
+
+
+  const generateAIQuestions = async () => {
+
+  try {
+
+    const API_URL =
+      import.meta.env.VITE_API_URL;
+
+    const response =
+      await axios.post(
+        `${API_URL}/ai/generate`,
+        { topic }
+      );
+
+    console.log(response.data);
+
+    // convert AI response
+    // then append
+
+    setQuestions(prev => [
+      ...prev,
+      ...aiQuestions
+    ]);
+
+  } catch (error) {
+
+    console.log(error);
+
+  }
+};
 
   return (
 
@@ -888,6 +921,13 @@ const handleCheckAnswers = async () => {
           Check All Answers
         </button>
 
+        <button
+          className="ai-btn"
+          onClick={generateAIQuestions}
+        >
+          Generate AI Questions
+        </button>
+
         {checked && (
 
           <div className="score-box">
@@ -907,3 +947,5 @@ const handleCheckAnswers = async () => {
 }
 
 export default QuizQues;
+
+
