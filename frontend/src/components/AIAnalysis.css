@@ -350,18 +350,26 @@
 }
 
 /* Motivational note */
+/* Dark Mode */
 .ai-motivation {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   padding: 18px 20px;
-  background: rgba(167,139,250,0.08);
-  border: 1px solid rgba(167,139,250,0.2);
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.2);
   border-radius: 14px;
   font-size: 15px;
-  color: #4623d4;
+  color: #c4b5fd;
   line-height: 1.6;
   font-style: italic;
+}
+
+/* Light Mode */
+.light .ai-motivation {
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  color: #5b21b6;
 }
 
 .ai-motivation-icon {
