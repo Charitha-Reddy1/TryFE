@@ -1,0 +1,423 @@
+/* AIAnalysis.css — place in src/components/AIAnalysis.css */
+
+/* ── Section wrapper ──────────────────────────────────────── */
+.ai-analysis-section {
+  margin-top: 48px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.light .ai-analysis-section {
+  border-color: rgba(0,0,0,0.1);
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.ai-analysis-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.05);
+  transition: background 0.18s;
+  user-select: none;
+}
+
+.ai-analysis-header:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.light .ai-analysis-header {
+  background: rgba(0,0,0,0.04);
+}
+
+.light .ai-analysis-header:hover {
+  background: rgba(0,0,0,0.07);
+}
+
+.ai-analysis-title {
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.light .ai-analysis-title {
+  color: #1e293b;
+}
+
+.ai-star {
+  color: #a78bfa;
+  font-size: 18px;
+}
+
+.ai-chevron {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ── Body ─────────────────────────────────────────────────── */
+.ai-analysis-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: rgba(255,255,255,0.03);
+  animation: fadeDown 0.25s ease;
+}
+
+.light .ai-analysis-body {
+  background: rgba(0,0,0,0.02);
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Score bars ───────────────────────────────────────────── */
+.score-bars-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.score-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.score-bar-label {
+  width: 190px;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.light .score-bar-label {
+  color: #334155;
+}
+
+.score-bar-track {
+  flex: 1;
+  height: 8px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.light .score-bar-track {
+  background: rgba(0,0,0,0.08);
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.score-bar-pct {
+  width: 40px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ── No scores state ──────────────────────────────────────── */
+.ai-no-scores {
+  font-size: 16px;
+  color: #64748b;
+  padding: 24px 0;
+  text-align: center;
+}
+
+/* ── Generate button ──────────────────────────────────────── */
+.ai-generate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.18s, transform 0.18s;
+  box-shadow: 0 4px 24px rgba(124,58,237,0.35);
+}
+
+.ai-generate-btn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.ai-generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Error ────────────────────────────────────────────────── */
+.ai-error {
+  font-size: 14px;
+  color: #f87171;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* ── Result card ──────────────────────────────────────────── */
+.ai-result {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeDown 0.35s ease;
+}
+
+/* Level + summary */
+.ai-result-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ai-level-badge {
+  flex-shrink: 0;
+  padding: 6px 18px;
+  border-radius: 99px;
+  border: 1px solid;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.ai-summary {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #cbd5e1;
+  flex: 1;
+}
+
+.light .ai-summary {
+  color: #334155;
+}
+
+/* Strengths / weaknesses */
+.ai-sw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .ai-sw-grid { grid-template-columns: 1fr; }
+  .score-bar-label { width: 130px; }
+}
+
+.ai-sw-box {
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid;
+}
+
+.ai-strengths {
+  background: rgba(34,197,94,0.06);
+  border-color: rgba(34,197,94,0.2);
+}
+
+.ai-weaknesses {
+  background: rgba(239,68,68,0.06);
+  border-color: rgba(239,68,68,0.2);
+}
+
+.ai-sw-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #e2e8f0;
+}
+
+.light .ai-sw-title {
+  color: #1e293b;
+}
+
+.ai-sw-box ul {
+  padding-left: 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-sw-box ul li {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.light .ai-sw-box ul li {
+  color: #475569;
+}
+
+/* Study plan */
+.ai-plan {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.light .ai-plan {
+  background: rgba(0,0,0,0.03);
+  border-color: rgba(0,0,0,0.08);
+}
+
+.ai-plan-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #e2e8f0;
+}
+
+.light .ai-plan-title {
+  color: #1e293b;
+}
+
+.ai-plan-weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ai-plan-week {
+  display: grid;
+  grid-template-columns: 64px 1fr 2fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+}
+
+.light .ai-plan-week {
+  background: rgba(0,0,0,0.04);
+}
+
+@media (max-width: 580px) {
+  .ai-plan-week {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ai-week-num {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #a78bfa;
+  padding-top: 2px;
+}
+
+.ai-week-focus {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+  padding-top: 1px;
+}
+
+.light .ai-week-focus {
+  color: #1e293b;
+}
+
+.ai-week-action {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.55;
+}
+
+.light .ai-week-action {
+  color: #475569;
+}
+
+/* Motivational note */
+.ai-motivation {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  background: rgba(167,139,250,0.08);
+  border: 1px solid rgba(167,139,250,0.2);
+  border-radius: 14px;
+  font-size: 15px;
+  color: #c4b5fd;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.ai-motivation-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-style: normal;
+}
+
+/* Regenerate */
+.ai-regen-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.ai-regen-btn:hover:not(:disabled) {
+  border-color: rgba(255,255,255,0.25);
+  color: #e2e8f0;
+}
+
+.ai-regen-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.light .ai-regen-btn {
+  border-color: rgba(0,0,0,0.12);
+  color: #64748b;
+}
+
+.light .ai-regen-btn:hover:not(:disabled) {
+  border-color: rgba(0,0,0,0.25);
+  color: #1e293b;
+}
+
+/* Spinner */
+.ai-spin {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255,255,255,0.25);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }

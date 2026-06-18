@@ -1,5 +1,6 @@
 import { useContext, useState ,useEffect} from "react";
 import { AppContext } from "../App";
+import AIAnalasis from "./AIAnalysis";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import "./Profile.css";
@@ -8,6 +9,8 @@ function Profile() {
 
   const { user, setUser } =
     useContext(AppContext);
+
+  const [topicScores,setTopicScores]=useState([]);
 
   const [stats, setStats] = useState({
 
@@ -21,6 +24,11 @@ function Profile() {
 
   const API_URL =
     import.meta.env.VITE_API_URL;
+
+  axios
+    .get(`${API_URL}/score/${user.name}`)
+    .then((res) => setTopicScores(res.data))
+    .catch((err) => console.log(err));
 
   axios
     .get(
@@ -156,6 +164,11 @@ function Profile() {
 
     </div>
 
+
+    <AIAnalysis
+  topicScores={topicScores}
+  userName={user?.name}
+    />
   </div>
 
 </div>
