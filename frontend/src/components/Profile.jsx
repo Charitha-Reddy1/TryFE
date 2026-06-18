@@ -1,6 +1,6 @@
 import { useContext, useState ,useEffect} from "react";
 import { AppContext } from "../App";
-import AIAnalasis from "./AIAnalysis";
+import AIAnalysis from "./AIAnalysis";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import "./Profile.css";
